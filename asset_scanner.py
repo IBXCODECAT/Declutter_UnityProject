@@ -30,13 +30,17 @@ def list_assets_files(directory):
     return file_list, meta_file_tuples
 
 def check_meta_files(directory, meta_file_tuples):
-    """Check if meta files exist and warn if they do not."""
-    print(Colors.WHITE + "\nMeta File Verification:" + Colors.RESET)
-
+    """Check if meta files exist and provide a summary of missing vs. found."""
+    linked_meta_count = 0  # Counter for found meta files
+    missing_meta_count = 0  # Counter for missing meta files
+    
     for meta, asset in meta_file_tuples:
         meta_full_path = os.path.join(directory, meta)
         
         if os.path.isfile(meta_full_path):
-            print(Colors.GREEN + f"Meta: {meta} (exists)" + Colors.RESET)
+            linked_meta_count += 1
         else:
-            print(Colors.RED + f"Meta: {meta} (not found)" + Colors.RESET)
+            missing_meta_count += 1
+
+    # Print the summary of linked and missing meta files
+    print(Colors.GREEN + f"Found {linked_meta_count} linked meta files, {missing_meta_count} missing." + Colors.RESET)

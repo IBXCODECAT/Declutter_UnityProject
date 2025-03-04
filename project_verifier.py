@@ -32,9 +32,9 @@ def is_unity_project(directory):
 def input_directory():
     """Prompt the user for a Unity project directory and verify it."""
     while True:
-        input_directory = input(Colors.WHITE + "Enter project root directory: " + Colors.GREEN).strip()
+        input_directory = input(Colors.RESET + "Enter project root directory: " + Colors.YELLOW).strip()
 
         if os.path.isdir(input_directory) and is_unity_project(input_directory):
             return input_directory
 
-        print(Colors.RED + "Invalid Unity project directory. Please enter a valid Unity project folder." + Colors.RESET)
+        print(Colors.RED + "The specified directory does not exist on the system." + Colors.RESET)

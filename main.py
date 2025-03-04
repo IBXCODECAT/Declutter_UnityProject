@@ -6,7 +6,7 @@ from asset_scanner import list_assets_files, check_meta_files
 def main():
     # Get the Unity project directory
     project_dir = input_directory()
-    print(Colors.GREEN + f"\nValid Unity project found at: {project_dir}" + Colors.RESET)
+    print(Colors.CYAN + f"\nValid Unity project found at: {project_dir}" + Colors.RESET)
 
     # List all files in the Assets folder (excluding .meta files) and generate meta file paths
     assets_files, meta_file_tuples = list_assets_files(project_dir)
