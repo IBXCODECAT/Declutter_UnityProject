@@ -1,12 +1,17 @@
+class Directories:
+    Audio = "Audio"
+    Prefabs = "Prefabs"
+    Scenes = "Scenes"
+
 class Extensions:
     asset_file_extensions = [ 'asset' ]
     
-    audio_file_extensions = [
+    Audio = [
         'flac', 'ogg', 'mp3', 'wav'
     ]
 
     prefab_file_extensions = [ 'prefab' ]
-    scene_file_extensions = [ 'unity' ]
+    Scenes = [ 'unity' ]
     script_file_extensions = [ 'asmdef', 'asmref', 'cs' ]
     shader_file_extensions = [ 'hlsl', 'shader' ]
 
