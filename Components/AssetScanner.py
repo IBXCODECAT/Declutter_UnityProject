@@ -1,5 +1,5 @@
 import os
-from components.colors import Colors
+from Components.Colors import Colors
 
 def list_assets_files(directory):
     """Search for all files in the Assets folder (excluding .meta files) and list them along with their .meta counterparts."""
