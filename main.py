@@ -1,7 +1,7 @@
 import os
-from colors import Colors
-from project_verifier import is_unity_project, input_directory
-from asset_scanner import list_assets_files, check_meta_files
+from components.colors import Colors
+from components.project_verifier import is_unity_project, input_directory
+from components.asset_scanner import list_assets_files, check_meta_files
 
 def main():
     # Get the Unity project directory

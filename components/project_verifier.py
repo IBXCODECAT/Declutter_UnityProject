@@ -1,5 +1,5 @@
 import os
-from colors import Colors
+from components.colors import Colors
 
 def is_unity_project(directory):
     """Check if the given directory is a valid Unity project and log verification steps."""
