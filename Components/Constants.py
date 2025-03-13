@@ -1,4 +1,5 @@
 class Directories:
+    Art = "Art"
     Audio = "Audio"
     Prefabs = "Prefabs"
     Scenes = "Scenes"

@@ -85,3 +85,21 @@ class MegaMover:
                 # Check if it's already in a Scenes directory at any level
                 if Directories.Scenes not in [dir for dir in normalized_path.split(os.sep)]:
                     MegaMover.move_asset_with_meta(absolute_path, scenes_dir)
+
+
+    @staticmethod
+    def move_art_files(project_dir, asset_files):
+        assets_dir = os.path.join(project_dir, "Art")
+        scenes_dir = os.path.join(assets_dir, Directories.Art)
+
+        for file_path in asset_files:
+            # Normalize paths for consistency
+            normalized_path = os.path.normpath(file_path)
+            absolute_path = os.path.abspath(os.path.join(project_dir, normalized_path))
+
+            # Check if the file is a scene file
+            if any(absolute_path.lower().endswith(f".{ext}") for ext in Extensions.Scenes):
+                print(Colors.CYAN + f"Found art file: {file_path}" + Colors.RESET)
+                # Check if it's already in a Scenes directory at any level
+                if Directories.Scenes not in [dir for dir in normalized_path.split(os.sep)]:
+                    MegaMover.move_asset_with_meta(absolute_path, scenes_dir)
