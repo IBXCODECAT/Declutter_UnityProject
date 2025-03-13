@@ -98,7 +98,7 @@ class MegaMover:
             absolute_path = os.path.abspath(os.path.join(project_dir, normalized_path))
 
             # Check if the file is a scene file
-            if any(absolute_path.lower().endswith(f".{ext}") for ext in Extensions.Scenes):
+            if any(absolute_path.lower().endswith(f".{ext}") for ext in Extensions.TextureFiles):
                 print(Colors.CYAN + f"Found art file: {file_path}" + Colors.RESET)
                 # Check if it's already in a Scenes directory at any level
                 if Directories.Scenes not in [dir for dir in normalized_path.split(os.sep)]:

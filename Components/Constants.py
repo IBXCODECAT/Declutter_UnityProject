@@ -16,6 +16,8 @@ class Extensions:
     script_file_extensions = [ 'asmdef', 'asmref', 'cs' ]
     shader_file_extensions = [ 'hlsl', 'shader' ]
 
+    TextureFiles = 'png'
+    
     texture_file_extensions = [ 
         'png', 'jpg', 'jpeg', 'tiff', 'tif', 'gif',
         'bmp', 'psd', 'tga', 'hdr', 'exr', 'svg', 'svgz',
